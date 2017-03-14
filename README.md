@@ -1,37 +1,6 @@
-## Welcome to GitHub Pages
+# bauduIFE #
+完成任务固然重要，但更重要的是在完成的过程中学到什么，掌握什么，遇到一些什么样的问题，为什么会出现，根源是什么，都有哪些解决方案，什么样的场景适合什么样的解决方案。不要贪图完成得多，而讲究完成得精！
 
-You can use the [editor on GitHub](https://github.com/hunterchow/hunterchow.github.com/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hunterchow/hunterchow.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# 任务预览 #
+### 彬彬学院 ###
+[task_1](https://hunterchow.github.io/binbin/01/JStask01.html)(零基础JavaScript编码（一）)  [task_2](https://hunterchow.github.io/binbin/02/JStask02.html)(零基础JavaScript编码（二）)  task_3(零基础JavaScript编码（三）)
