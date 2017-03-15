@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 04</title>
+</head>
+<style>
+    #box{
+        width:auto;
+        height: 60px;
+        margin-top:2px;
+        overflow: auto;
+    }
+    #box div{
+        margin:2px;
+        width:50px;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        font-size: 25px;
+        background:red;
+        display:inline-block;
+        color:white;
+
+    }
+</style>
+<body>
+    <input id="input" type="number" placeholder="请输入要推入的数字">
+    <button type="submit" onclick="leftIn()">左侧入</button>
+    <button type="submit" onclick="rightIn()">右侧入</button>
+    <button type="submit" onclick="leftOut()">左侧出</button>
+    <button type="submit" onclick="rightOut()">右侧出</button>
+    <div id="box"></div>
+</body>
+<script>
+    var arr=[];
+        function getNum() {             //取得输入的值
+        return document.getElementById("input").value;
+    }
+
+    function leftIn() {                //按钮点击事件，下同
+        arr.unshift(getNum());
+        draw();                        //将数组的元素通过draw()包装后绘制出来，每次改变都要重绘
+    }
+
+    function rightIn() {
+        arr.push(getNum());
+        draw();
+    }
+
+    function leftOut() {
+        var count=arr.shift();
+        alert(count);
+        draw();
+    }
+
+    function rightOut() {
+        var count=arr.pop();
+        alert(count);
+        draw();
+    }
+
+
+    function draw() {
+        document.getElementById("box").innerHTML = null;    //绘制之前把容器先清空，避免把之前存在
+            arr.forEach(function (item, index) {            //的元素重复绘制，关于forEach可参考前面任务
+                var box = document.getElementById("box");
+                var div = document.createElement("div");
+                div.onclick=function(){         //给每个元素容器添加点击事件
+                   box.removeChild(div);        //通过父节点移除对应子节点
+                    arr[index]="";         //注意一定要把arr中对应元素设为"",不然下次推入时会把刚删掉
+                };                         //的再次推入
+                div.innerHTML = arr[index];    //把数字写入“方块”中
+                if(item!="") {                 //加一个判据，避免无输入或者被点击删除的元素挂进box容器中
+                    box.appendChild(div);
+                }
+                document.getElementById("input").value = null;  //最后把输入框清空，方便下次输入
+            });
+        }
+</script>
+</html>
