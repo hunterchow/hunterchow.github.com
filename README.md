@@ -3,4 +3,4 @@
 
 # 任务预览 #
 ### 彬彬学院 ###
-[task_1](https://hunterchow.github.io/binbin/01/JStask01.html)(零基础JavaScript编码（一）)  [task_2](https://hunterchow.github.io/binbin/02/JStask02.html)(零基础JavaScript编码（二）)  task_3(零基础JavaScript编码（三）)
+[task_1](https://hunterchow.github.io/binbin/01/JStask01.html)(零基础JavaScript编码（一）)  [task_2](https://hunterchow.github.io/binbin/02/JStask02.html)(零基础JavaScript编码（二）)  [task_3](https://hunterchow.github.io/binbin/03/JStask03.html)(零基础JavaScript编码（三）) [task_4](https://hunterchow.github.io/binbin/04/JStask04.html)(零基础JavaScript编码（四）)
