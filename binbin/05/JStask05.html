@@ -13,7 +13,7 @@
     #box div{
         margin:2px;
         width:20px;
-        background:rgba(0, 200, 255, 0.75);
+        background:red;
         display:inline-block;
     }
 </style>
@@ -24,6 +24,7 @@
 <button type="submit" onclick="leftOut()">左侧出</button>
 <button type="submit" onclick="rightOut()">右侧出</button>
 <button type="submit" onclick="startBubble()">冒泡可视化</button>
+<button type="submit" onclick="rand()">机选一组</button>
 <div id="box"></div>
 </body>
 <script>
@@ -70,6 +71,13 @@
         count&&alert(count);
     }
 
+    function rand() {
+        arr=[];
+        for(var i=0;i<10;i++){
+            arr.push(parseInt(Math.random()*90+10));
+        }
+        draw();
+    }
 
     function draw() {
         document.getElementById("box").innerHTML = null;    //绘制之前把容器先清空，避免把之前存在
@@ -96,29 +104,31 @@
                     temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
-                    arr1.push(JSON.parse(JSON.stringify(arr)));
-                }
+                    arr1.push(JSON.parse(JSON.stringify(arr))); //每交换一次，就保存一次arr中的顺序，相当于排一次截一下屏
+                }                                               //如果发生10次交换，那么arr1中就有10个arr的快照
 
             }
         }
         return arr;
     }
 
-    function painting(){
+    function painting(){                                 //另外声明一个函数来绘制arr1中的快照
         if(arr1.length!=0) {
-            document.getElementById("box").innerHTML = null;
+            document.getElementById("box").innerHTML = null;  //为避免把前一次的快照重复绘制，每次绘制开始前先清空容器内容
         }
-        var photo=arr1.shift()||[];
+        var photo=arr1.shift()||[];                   //每次从arr1中取出最前面一张快照    加[]是为了避免arr1被取完返回错误
         if(photo.length!=0){
-        photo.forEach(function (item, index) {
+        photo.forEach(function (item, index) {        //和上一个任务一样的绘制方法
             var box = document.getElementById("box");
             var div = document.createElement("div");
             div.style.height=parseInt(photo[index])+"px";
+            if(item!="") {
                 box.appendChild(div);
+            }
     });
-        }else{
+        }else{                                      //如果快照被取完，停止定时器
             clearInterval(t);
-            draw();
+            draw();                                 //再draw()一次是为了排完序后可以点击删除对应元素
         }
     }
 
