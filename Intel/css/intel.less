@@ -1,0 +1,80 @@
+//bootstrap样式
+@import "bootstrap.less";
+
+//自定义样式
+//body{
+//  margin-top: @navbar-height;
+//}
+@logo-height:42px;
+.logo{
+  display: inline-block;
+  width: 63px;
+  height: @logo-height;
+  background: url("../img/hdr-spr.png") 0 -512px no-repeat;
+  margin-top: floor((@navbar-height - @logo-height)/2);
+}
+
+.main{
+  background-color: @blue-dark;
+  color: @text-color-light;
+  a{
+    color: @text-color-light;
+    &:hover{
+      color: @blue-light;
+    }
+  }
+  >.container>.row{
+    margin-bottom: 40px;
+    .row>div:last-child{
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.masked{
+  position: relative;
+}
+.masked>.mask{
+  position: absolute;
+  top:85%;
+  right:0;
+  bottom:0;
+  left:0;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  transition: top 0.2s linear;
+}
+.masked>.hover{
+  top:0;
+}
+
+.coreInfo{
+  position: absolute;
+  /*top:0;*/
+  right:0;
+  bottom:-5px;
+  left:0;
+  color:#fff;
+  padding:35px;
+}
+#coreI5{
+  background-color: #0062a9;
+}
+
+.proList{
+  display: inline-block;
+  position: relative;
+  list-style: none;
+}
+
+#login-form{
+  width: 350px;
+  height: 280px;
+  position: relative;
+  background-color: #fff;
+  padding: 20px 90px 20px 10px;
+}
+.checkbox{
+  display: inline;
+  float: right;
+}
