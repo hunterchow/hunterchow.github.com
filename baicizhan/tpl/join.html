@@ -1,0 +1,46 @@
+<div ng-include=" 'tpl/header.html' "></div>
+
+<div class="container" id="join-us">
+  <div class="bcz-banner">
+    <div id="happyJobs" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <div class="carousel-inner">
+        <div class="item {{banner[0]}}"><img src="img/join/jobs-01.jpg"/></div>
+        <div class="item {{banner[1]}}"><img src="img/join/jobs-02.jpg"/></div>
+        <div class="item {{banner[2]}}"><img src="img/join/jobs-03.jpg"/></div>
+        <div class="item {{banner[3]}}"><img src="img/join/jobs-04.jpg"/></div>
+      </div>
+      <ol class="carousel-indicators list list-inline list-unstyled">
+        <li data-target="#happyJobs" data-slide-to="0" class="{{banner[0]}}"></li>
+        <li data-target="#happyJobs" data-slide-to="1" class="{{banner[1]}}"></li>
+        <li data-target="#happyJobs" data-slide-to="2" class="{{banner[2]}}"></li>
+        <li data-target="#happyJobs" data-slide-to="3" class="{{banner[3]}}"></li>
+      </ol>
+    </div>
+  </div>
+  <div class="intro">
+    <p class="info">成都超有爱科技有限公司成立于 2012 年，以背单词 App 百词斩切入了在线教育市场。</p>
+    <p class="info">目前的产品分为 App 软件和实体书籍两个类别，其中App“百词斩”的用户已过千万，领先目前所有的在线教育创业公司。而由核心业务衍生出的实体书业务则为公司提供了稳定的现金流，配合经纬中国 A
+      轮千万级别的投资，目前公司正稳定而快速的发展中。</p>
+    <p class="info">超有爱科技独有的企业文化和强有竞争力的薪酬体系，吸引了大批来自北上广知名互联网公司的资深员工鼎力支持，在相当长的时间内，我们都专注于做好用户体验以及 高度关注 “ 用户增长，用户活跃 ”
+      这两项指标，努力把用户体验做到极致。</p>
+    <p class="info">信仰相同理念的你，快来一起 high : )</p>
+  </div>
+  <div class="jobs">
+    <div class="head">
+      <a class="btn selected" ng-click="fullTime()">全职岗位</a>
+      <a class="btn" ng-click="practice()">实习岗位</a>
+    </div>
+    <table class="jobs-table table">
+      <tbody>
+      <tr ng-repeat="J in jobList">
+        <td><a href="#">{{J.name}}</a></td>
+        <td>{{J.category}}</td>
+        <td>{{J.location}}</td>
+        <td>{{J.time}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div ng-include=" 'tpl/footer.html' "></div>

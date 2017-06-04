@@ -1,0 +1,807 @@
+@import "bootstrap.less";
+
+body {
+  background-color: rgb(244, 244, 244);
+  //.page{
+  //  position: absolute;
+  //  width:100%;
+  //  height: 100%;
+  //  transition : all .15s;
+  //  .ng-leave{
+  //    left:0;
+  //    //top:0;
+  //  }
+  //  .ng-leave-active{
+  //    left:-100%;
+  //    //top:-100%;
+  //  }
+  //  .ng-enter{
+  //    left:100%;
+  //    //top:100%;
+  //  }
+  //  .ng-enter-active{
+  //    left:0;
+  //    //top:0;
+  //  }
+  //}
+}
+
+//页眉导航
+.navbar {
+  position: relative;
+  vertical-align: middle;
+  z-index: 10;
+  .container-fluid {
+    width: 56rem;
+    min-width: 56.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    .navbar-header {
+      .navbar-brand {
+        display: inline-block;
+        width: 7.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        margin-top: 0.5rem;
+        padding: 0;
+        text-align: right;
+        background: url("../img/icons.png") 0 0 no-repeat;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .nav {
+    font-size: 0.875rem;
+    li {
+      margin-left: 18px;
+    }
+  }
+}
+
+//页脚导航
+footer {
+  position: absolute;
+  width: 100%;
+  min-width: 56.25rem;
+  height: 8rem;
+  text-align: center;
+  color: grey;
+
+  .list {
+    margin-top: 2rem;
+    .item {
+      height: 1.25rem;
+      line-height: 1.25rem;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+      .tittle {
+        font-size: 1rem;
+        &:after {
+          content: "/";
+          display: inline-block;
+          margin-left: 0.5rem;
+        }
+      }
+      .common-icons {
+        background: url("../img/icons.png") no-repeat;
+        display: inline-block;
+        width: 1.625rem;
+        height: 1.25rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        vertical-align: middle;
+        transition: all 0.3s;
+        &:hover {
+          + .detail {
+            visibility: visible;
+            opacity: 1;
+            z-index: 100;
+            margin-top: -18rem;
+          }
+        }
+      }
+      .weibo {
+        background-position: 0 -3.15rem;
+        &:hover {
+          background-position: 0 -4.8rem;
+        }
+      }
+      .weixin {
+        background-position: -1.87rem -3.1rem;
+        &:hover {
+          background-position: -1.87rem -4.6875rem;
+        }
+      }
+      .ios {
+        background-position: -3.65rem -3.125rem;
+        &:hover {
+          background-position: -3.65rem -4.6875rem;
+        }
+      }
+      .android {
+        background-position: -5.425rem -3.125rem;
+        &:hover {
+          background-position: -5.425rem -4.6875rem;
+        }
+      }
+      .phone {
+        background-position: -7.3rem -3.125rem;
+        &:hover {
+          background-position: -7.3rem -4.6875rem;
+        }
+      }
+      .email {
+        background-position: -9.175rem -3.125rem;
+        &:hover {
+          background-position: -9.175rem -4.6875rem;
+        }
+      }
+      .detail {
+        position: absolute;
+        width: 14rem;
+        height: 16rem;
+        margin-left: -7rem;
+        margin-top: -23rem;
+        border-radius: 0.375rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1.3125rem 1.875rem;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.68s;
+        font-size: 0.75rem;
+        h3 {
+          margin: 0;
+          padding: 1.3125rem;
+          background-color: rgb(59, 65, 79);
+          color: rgb(170, 170, 170);
+          font-size: 1rem;
+          font-weight: 400;
+        }
+        h4 {
+          margin: 0;
+          padding: 1.25rem 0 0 0;
+          font-size: 0.75rem;
+          color: rgb(153, 153, 153);
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+          color: rgb(98, 179, 247);
+          margin-top: 1.3125rem;
+        }
+      }
+      .detail.qr-code {
+        width: 8.125rem;
+        height: 8.125rem;
+        margin-left: 3.7rem;
+        top: 11rem;
+        background: url("../img/bcz_weixin.jpg") 0 0 / contain no-repeat;
+      }
+      .detail.phone-detail {
+        margin-left: -1.7rem;
+      }
+      .detail.email-detail {
+        margin-left: 1rem;
+      }
+    }
+  }
+  p {
+    margin-top: 0.5rem;
+    font-size: 0.625rem;
+  }
+}
+
+//主页样式
+.content {
+  text-align: center;
+  margin: 7% auto 0;
+  .list {
+    display: inline-block;
+    width: 56rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    .item {
+      display: inline-block;
+      width: 33%;
+      height: 270px;
+      min-width: 12.5rem;
+      min-height: 12.5rem;
+      position: relative;
+      perspective: 900px;
+      perspective-origin: 50% 50%;
+      .card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        &:hover {
+          transform: rotateY(180deg);
+        }
+      }
+      .font {
+        font-size: 2rem;
+        padding-top: 38%;
+        margin: 0;
+        z-index: 2;
+        background-color: rgb(244, 244, 244);
+        box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px -1px;
+      }
+      .font {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgb(46, 154, 244);
+        backface-visibility: hidden;
+      }
+      .back {
+        z-index: 1;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgb(46, 154, 244);
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        background: transparent;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.slogan {
+  padding: 7% 0 9%;
+  .container {
+    width: 63%;
+    min-width: 56.25rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px -1px;
+    padding-top: 6.25rem;
+    padding-bottom: 2.5rem;
+    .tittle {
+      width: 31.25rem;
+      margin: -7.8125rem auto 0;
+      font-size: 2.5rem;
+      font-weight: 400;
+      background-color: rgb(244, 244, 244);
+      color: rgb(51, 51, 51);
+    }
+    .sub-tittle {
+      margin-top: 12px;
+      font-size: 1.125rem;
+      color: rgb(136, 136, 136);
+    }
+    .more-bg {
+      position: relative;
+      width: 18.75rem;
+      height: 2.25rem;
+      left: 50%;
+      bottom: -3.55rem;
+      margin-left: -9.375rem;
+      background-color: rgb(244, 244, 244);
+      .more {
+        display: inline-block;
+        //margin-bottom: -7.8125rem;
+        color: rgb(46, 154, 244);
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        width: 14.25rem;
+        height: 2.25rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        border: 1px solid rgb(46, 154, 244);
+        border-radius: 0.3125rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+          background-color: rgb(46, 154, 244);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+//登录页面样式
+.body-bg {
+  background: url("../img/login/login_page_bg.jpg");
+  //导航
+  header {
+    width: 950px;
+    margin: 0 auto;
+    padding-top: 22px;
+    > a {
+      display: inline-block;
+      width: 130px;
+      height: 52px;
+      margin-left: 75px;
+      background: url("../img/login/bcz-logo-new.png") no-repeat;
+    }
+    ul {
+      float: right;
+      margin-top: 9px;
+      margin-right: 53px;
+    }
+  }
+  //主体
+  content {
+    display: block;
+    width: 795px;
+    height: 475px;
+    margin: 0 auto;
+    margin-top: 12px;
+    padding-bottom: 50px;
+    background: url("../img/login/login_middle_bg.png") 0 0 no-repeat;
+    .login {
+      width: 525px;
+      float: left;
+      h3 {
+        font-size: 30px;
+        line-height: 40px;
+        color: #616161;
+        margin: 55px 0 30px 115px;
+      }
+      .form-list {
+        height: 70px;
+        margin-bottom: 15px;
+        label {
+          display: inline-block;
+          width: 95px;
+          font-size: 15px;
+          color: rgb(136, 136, 136);
+        }
+        > input {
+          display: inline-block;
+          width: 316px;
+          height: 22px;
+          line-height: 20px;
+          margin-left: 10px;
+          padding: 20px 0 20px 15px;
+        }
+      }
+      .remember-me {
+        height: 60px;
+        margin-left: 120px;
+        font-size: 18px;
+        color: #0072bb;
+        label {
+          display: flex;
+          > input {
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            line-height: 20px;
+            margin: 6px;
+            border: 1px solid #0072bb;
+            transition: all 0.5s;
+            &:checked {
+              + img {
+                visibility: visible;
+              }
+            }
+          }
+          img {
+            float: left;
+            width: 25px;
+            height: 25px;
+            margin-left: -25px;
+            visibility: hidden;
+          }
+          span {
+            display: inline-block;
+            margin: 3px;
+          }
+          a {
+            text-decoration: none;
+            margin-left: 45px;
+            margin-top: 3px;
+            color: inherit;
+          }
+        }
+      }
+      .btn-set {
+        width: 157px;
+        height: 45px;
+        margin-left: 130px;
+        background: url("../img/login/set_btn.png");
+      }
+    }
+
+    .register {
+      width: 270px;
+      float: right;
+      p:first-child {
+        font-size: 18px;
+        color: #989898;
+        margin-top: 57px;
+        + p {
+          font-size: 18px;
+          color: #989898;
+          margin-top: 5px;
+          margin-bottom: 15px;
+        }
+      }
+      a.other {
+        display: block;
+        width: 224px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 198px;
+  background: url("../img/login/login_footer_bg.png") repeat-x;
+  .footer-content {
+    height: 127px;
+    margin: 0 auto;
+    padding-top: 28px;
+    text-align: center;
+    p {
+      margin: 20px auto;
+      font-size: 15px;
+      color: #98a2a6;
+      a {
+        font-size: 17px;
+        color: #87989f;
+        text-decoration: none;
+        &:hover {
+          color: #377dc0;
+        }
+      }
+      a.fallow {
+        display: inline-block;
+        height: 23px;
+        line-height: 23px;
+        margin-left: 43px;
+        padding-left: 35px;
+        font-size: 15px;
+        background: url("../img/login/f_13.png") no-repeat;
+      }
+      a.letter {
+        display: inline-block;
+        height: 23px;
+        line-height: 23px;
+        margin-left: 27px;
+        padding-left: 35px;
+        font-size: 15px;
+        background: url("../img/login/f_10.png") no-repeat;
+      }
+    }
+  }
+}
+
+//下载页面样式
+.download-content {
+  width: 56rem;
+  min-width: 56rem;
+  height: 575px;
+  //position: absolute;
+  //left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  margin-bottom: 0;
+  font-size: 0;
+  text-align: center;
+  .left {
+    position: relative;
+    display: inline-block;
+    width: 33rem;
+    vertical-align: top;
+    font-size: 0.75rem;
+    color: #2e9af4;
+    text-align: left;
+    .tittle {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      h2, h3 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin: 0;
+        //vertical-align: middle;
+        line-height: 1.5;
+      }
+      h3 {
+        display: inline-block;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+    .sub-tittle {
+      font-size: 2.5rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0;
+      vertical-align: top;
+    }
+    .sub-slogan {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.625rem;
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      &:before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        left: 8%;
+        top: 2.2rem;
+        width: 100%;
+        height: 2.25rem;
+        border-top: 0.125rem solid rgb(46, 154, 244);
+        border-radius: 100% 80% 0 0;
+        transform: rotateZ(-2deg);
+      }
+      &:after {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        left: 3%;
+        top: 2.6rem;
+        width: 105%;
+        height: 1.3125rem;
+        background-color: rgb(244, 244, 244);
+        transform: rotateZ(-4deg);
+      }
+    }
+    .btn-download {
+      display: block;
+      position: relative;
+      font-size: 2.5rem;
+      color: #eee;
+      height: 3.75rem;
+      line-height: 1.5;
+      margin-top: 2rem;
+      margin-bottom: 4.375rem;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0 5%;
+      background-color: rgb(59, 65, 79);
+      transition: all 0.5s;
+      &:hover {
+        background-color: rgb(46, 154, 244);
+        + .qr-code {
+          visibility: visible;
+          opacity: 1;
+          transform: translate3d(0.625rem, -0.125rem, 0);
+          > img:last-of-type {
+            animation: zoom 0.5s;
+          }
+        }
+      }
+      + .qr-code {
+        width: 22rem;
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        perspective: 100px;
+        transform-style: preserve-3d;
+        transition: all .5s;
+        visibility: hidden;
+        opacity: 0;
+        img {
+          display: inline-block;
+          width: 7rem;
+          height: auto;
+          margin-right: 0.75rem;
+          border-radius: 0.625rem;
+          box-shadow: rgba(0, 0, 0, 0.15) 0 1.3125rem 1.875rem;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .info-list {
+      color: rgb(166, 167, 167);
+      .item {
+        width: 8rem;
+        .info-icons {
+          width: 3.125rem;
+          height: 3.125rem;
+          background: url("../img/download/characteristic-icons.png") 0 0 no-repeat;
+        }
+        .point {
+          margin-bottom: 0;
+          font-size: 1.1rem;
+        }
+        .sub-point {
+          margin-top: 0;
+          font-size: 0.625rem;
+        }
+      }
+    }
+  }
+  .right {
+    display: inline-block;
+    width: 20rem;
+    height: 100%;
+    vertical-align: top;
+    font-size: 0.75rem;
+    border: 0.125rem solid #ddd;
+    border-radius: 3.125rem 3.125rem 0 0;
+    overflow: hidden;
+    .head {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+      &:before, &:after {
+        content: " ";
+        display: inline-block;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 0.12rem solid #ddd;
+        border-radius: 1.25rem;
+        vertical-align: middle;
+        margin-left: 32%;
+      }
+      &:after {
+        width: 5rem;
+        height: 1rem;
+        margin-left: 5%;
+      }
+    }
+    .carousel {
+      width: 90%;
+      height: auto;
+      min-height: 30rem;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: rgba(0, 0, 0, .5) 0 0 3px;
+      background-color: white;
+      .carousel-inner {
+        height: 100%;
+        z-index: 1;
+        .active {
+          animation: carouselIn 0.6s;
+          z-index: 2;
+        }
+        .item {
+          //position: absolute;
+          //left:0;
+          //top:0;
+          width: 100%;
+          z-index: 1;
+          animation: carouselOut 0.6s;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .carousel-indicators {
+        width: 60%;
+        height: 1.25rem;
+        position: absolute;
+        left: 50%;
+        //bottom:3%;
+        margin-left: -30%;
+        padding: 0;
+        text-align: center;
+        z-index: 3;
+        li {
+          text-indent: -9999em;
+          //display: inline-block;
+          width: 6px;
+          height: 6px;
+          margin: 0 0.125rem;
+          background-color: rgb(173, 216, 230);
+          border-radius: 50%;
+          .active {
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+//加入我们页面样式
+#join-us {
+  .bcz-banner {
+    width: 900px;
+    //height:420px;
+    max-height: 385px;
+    margin: 5px auto 70px;
+    .carousel-inner {
+      img {
+        height: 385px;
+      }
+    }
+    .carousel-indicators {
+      position: absolute;
+      bottom: -50px;
+      li {
+        background-color: lightblue;
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 7px;
+        height: 7px;
+        border-radius: 7px;
+      }
+      .active {
+        transform: scale(1.3);
+      }
+    }
+  }
+  .intro {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    text-align: left;
+    font-size: 16px;
+    p{
+      margin-bottom: 20px;
+      line-height: 30px;
+      color: rgb(128,128,128);
+    }
+  }
+  .jobs{
+    width:900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.25) 0 0 2px;
+    padding-bottom: 15px;
+    .head{
+      height:80px;
+      font-size: 20px;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      a{
+        text-decoration: none;
+        line-height: 49px;
+        color: rgb(0,98,198);
+        &:first-child{
+          margin-right: 30px;
+        }
+      }
+    }
+    .jobs-table{
+      width:90%;
+      margin-left: auto;
+      margin-right: auto;
+      tr{
+        margin-bottom: 20px;
+        height: 58px;
+        td{
+          width:25%;
+          padding: 12.5px 0;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 14px;
+          color: #818181;
+          a{
+            text-decoration: none;
+            color: rgb(59,65,79);
+            &:hover{
+              color: rgb(0,98,198);
+            }
+          }
+          &:first-child{
+            text-align: left;
+          }
+          &:last-child{
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
