@@ -3,7 +3,7 @@
 	height: 550px;
 	margin: 20px auto 0 auto;
 	position: relative;
-    background-image: url("../img/tetris.png");
+	background-image:url('../img/tetris.png');
 }
 .playground img  { position: absolute;}
 .playground p  {font-size: 30px;
