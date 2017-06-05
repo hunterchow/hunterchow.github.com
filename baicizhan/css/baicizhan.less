@@ -2,28 +2,28 @@
 
 body {
   background-color: rgb(244, 244, 244);
-  //.page{
-  //  position: absolute;
-  //  width:100%;
-  //  height: 100%;
-  //  transition : all .15s;
-  //  .ng-leave{
-  //    left:0;
-  //    //top:0;
-  //  }
-  //  .ng-leave-active{
-  //    left:-100%;
-  //    //top:-100%;
-  //  }
-  //  .ng-enter{
-  //    left:100%;
-  //    //top:100%;
-  //  }
-  //  .ng-enter-active{
-  //    left:0;
-  //    //top:0;
-  //  }
-  //}
+  .page{
+    //position: absolute;
+    //width:100%;
+    //height: 100%;
+    //transition : all .15s;
+    //.ng-leave{
+    //  left:0;
+    //  //top:0;
+    //}
+    //.ng-leave-active{
+    //  left:-100%;
+    //  //top:-100%;
+    //}
+    //.ng-enter{
+    //  left:100%;
+    //  //top:100%;
+    //}
+    //.ng-enter-active{
+    //  left:0;
+    //  //top:0;
+    //}
+  }
 }
 
 //页眉导航
@@ -45,7 +45,7 @@ body {
         margin-top: 0.5rem;
         padding: 0;
         text-align: right;
-        background: url("../img/icons.png") 0 0 no-repeat;
+        background: url("../img/home/icons.png") 0 0 no-repeat;
         font-size: 1.5rem;
       }
     }
@@ -83,7 +83,7 @@ footer {
         }
       }
       .common-icons {
-        background: url("../img/icons.png") no-repeat;
+        background: url("../img/home/icons.png") no-repeat;
         display: inline-block;
         width: 1.625rem;
         height: 1.25rem;
@@ -175,7 +175,7 @@ footer {
         height: 8.125rem;
         margin-left: 3.7rem;
         top: 11rem;
-        background: url("../img/bcz_weixin.jpg") 0 0 / contain no-repeat;
+        background: url("../img/home/bcz_weixin.jpg") 0 0 / contain no-repeat;
       }
       .detail.phone-detail {
         margin-left: -1.7rem;
@@ -743,62 +743,144 @@ footer {
     margin-bottom: 60px;
     text-align: left;
     font-size: 16px;
-    p{
+    p {
       margin-bottom: 20px;
       line-height: 30px;
-      color: rgb(128,128,128);
+      color: rgb(128, 128, 128);
     }
   }
-  .jobs{
-    width:900px;
+  .jobs {
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
     border-radius: 5px;
-    box-shadow: rgba(0,0,0,0.25) 0 0 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px;
     padding-bottom: 15px;
-    .head{
-      height:80px;
+    .head {
+      height: 80px;
       font-size: 20px;
       text-align: center;
       padding-top: 15px;
       padding-bottom: 15px;
       border-bottom: 1px solid #ddd;
-      a{
+      a {
         text-decoration: none;
         line-height: 49px;
-        color: rgb(0,98,198);
-        &:first-child{
+        color: rgb(0, 98, 198);
+        &:first-child {
           margin-right: 30px;
         }
       }
     }
-    .jobs-table{
-      width:90%;
+    .jobs-table {
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
-      tr{
+      tr {
         margin-bottom: 20px;
         height: 58px;
-        td{
-          width:25%;
+        td {
+          width: 25%;
           padding: 12.5px 0;
           text-align: center;
           vertical-align: middle;
           font-size: 14px;
           color: #818181;
-          a{
+          a {
             text-decoration: none;
-            color: rgb(59,65,79);
-            &:hover{
-              color: rgb(0,98,198);
+            color: rgb(59, 65, 79);
+            &:hover {
+              color: rgb(0, 98, 198);
             }
           }
-          &:first-child{
+          &:first-child {
             text-align: left;
           }
-          &:last-child{
+          &:last-child {
             text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+//小讲堂页面样式
+.bcz-class {
+  .class-banner {
+    width: 900px;
+    margin: 2px auto 70px;
+    max-height: 385px;
+    img {
+      width: 100%;
+      height: 385px;
+    }
+  }
+  .lessons {
+    width: 900px;
+    height:480px;
+    margin: 0 auto;
+    zoom: 1;
+    .lesson {
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      width: 210px;
+      height: 220px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      background-color: white;
+      &:nth-child(4n){
+        margin-right: 0;
+      }
+      img {
+        border:0;
+        width: 100%;
+        height: 116px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+      .detail {
+        padding: 15px 10px 0;
+        h5 {
+          margin: 0;
+          font-size: 12px;
+          font-weight: bolder;
+          text-align: left;
+          a{
+            color: rgb(59,65,79);
+            text-decoration: none;
+            &:hover{
+              color: rgb(46,154,244);
+            }
+          }
+        }
+        p {
+          height: 43px;
+          margin-top: 7px;
+          margin-bottom: 0;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #e1e1e1;
+          font-size: 9px;
+          color: #808080;
+          text-align: left;
+        }
+        .count {
+          div {
+            display: inline-block;
+            margin-top: 2.5px;
+            margin-right: 22px;
+            img {
+              width: 10px;
+              height: 10px;
+              border-bottom: none;
+            }
+            span {
+              margin-left: 6px;
+              font-size: 13px;
+              color: rgb(46, 154, 244)
+            }
           }
         }
       }

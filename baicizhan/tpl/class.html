@@ -1,0 +1,26 @@
+<div ng-include=" 'tpl/header.html' "></div>
+<div class="bcz-class container">
+  <div class="class-banner">
+    <img src="img/class/xjtmain.png" alt="百词斩小讲堂">
+  </div>
+  <div class="lessons">
+    <section class="lesson" ng-repeat="S in section">
+      <a href="#"><img ng-src="{{S.imgSrc}}" alt="" width="300px"></a>
+      <div class="detail">
+        <h5><a href="">{{S.h5}}</a></h5>
+        <p>{{S.p}}</p>
+        <div class="count">
+          <div>
+            <a href=""><img src="img/class/like.svg" alt=""></a>
+            <span>{{S.likeCount}}</span>
+          </div>
+          <div>
+            <img src="img/class/browse.svg" alt="">
+            <span>{{S.eyeCount}}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div ng-include=" 'tpl/footer.html' "></div>
