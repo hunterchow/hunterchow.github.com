@@ -1,0 +1,154 @@
+<div id="wordTV">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#/wordTV" class="navbar-brand">
+          <img src="img/wordTV/logo_1.png" alt="">
+        </a>
+      </div>
+      <form action="" class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="搜个单词试试">
+          <button type="button" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+      </form>
+      <ul class="navbar-right">
+        <li class="login"><a href="#/login">登录</a><a>/</a><a href="#/login">注册</a></li>
+        <li><a href="#/class">小讲堂</a></li>
+        <li><a href="#/home">百词斩官网</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-bg">
+    <div class="content">
+      <div class="category">
+        <div class="bcz-video">
+          <div class="video-window"></div>
+          <div class="video-detail">为什么你只记住了图而没有记住单词？</div>
+        </div>
+        <div class="bcz-choice">
+          <h3>请选择你的单词书
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+          </h3>
+          <a href="" class="book" ng-repeat="b in book">
+            <div class="book-block">
+              <img ng-src="img/wordTV/{{b.face}}.png" alt="">
+              <div class="book-block-tittle">
+                <img src="img/wordTV/begin.png" alt="">
+              </div>
+              <div class="book-block-star">
+                <img ng-src="img/wordTV/copy-{{b.difficulty}}.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="advice">
+        <div class="left-advice">
+          <div class="head">
+            <a href="">更多>></a>
+            <h3>最新推荐
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </h3>
+          </div>
+          <div class="new-advice">
+            <div class="advice-block" ng-repeat="i in newAdvice">
+              <a href="">
+                <div class="block-pic">
+                  <img ng-src="img/wordTV/{{i.face}}" alt="">
+                </div>
+                <div class="block-info">
+                  <div class="info-tittle">
+                    <h4>{{i.infoH4}}</h4>
+                    <p>{{i.infoP}}</p>
+                  </div>
+                  <div class="info-star">
+                    <div>
+                      <span>学霸指数：</span>
+                      <div class="star-box" style="width:{{i.star}}">
+                        <img src="img/wordTV/star-5.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="head">
+            <a href="">更多>></a>
+            <h3>热门推荐
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </h3>
+          </div>
+          <div class="new-advice">
+            <div class="advice-block" ng-repeat="i in hotAdvice">
+              <a href="">
+                <div class="block-pic">
+                  <img ng-src="img/wordTV/{{i.face}}" alt="">
+                </div>
+                <div class="block-info">
+                  <div class="info-tittle">
+                    <h4>{{i.infoH4}}</h4>
+                    <p>{{i.infoP}}</p>
+                  </div>
+                  <div class="info-star">
+                    <div>
+                      <span>学霸指数：</span>
+                      <div class="star-box" style="width:{{i.star}}">
+                        <img src="img/wordTV/star-5.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="right-advice">
+          <div class="head">
+            <a href=""></a>
+            <h3>
+            </h3>
+          </div>
+          <ul class="news-list">
+            <li ng-repeat="n in newsBox">
+              <span class="circle"></span>
+              <a href="">{{n.content}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <p>
+        <a href="">
+          <img src="img/wordTV/footer-ico-1.png" alt="">
+          <span>关于我们</span>
+        </a>
+        <a href="">
+          <img src="img/wordTV/footer-ico-2.png" alt="">
+          <span>关注我们</span>
+        </a>
+        <a href="">
+          <img src="img/wordTV/footer-ico-2.png" alt="">
+          <span>我要吐槽</span>
+        </a>
+        <a href="">
+          <img src="img/wordTV/footer-ico-2.png" alt="">
+          <span>单词TV内测群：335831615</span>
+        </a>
+      </p>
+      <div class="cpy-info">
+        <a href="">成都超有爱教育科技出品 © 2011 - 2015 baicizhan.com. All Rights Reserved. 蜀ICP备12013359号</a>
+      </div>
+    </div>
+  </footer>
+</div>
