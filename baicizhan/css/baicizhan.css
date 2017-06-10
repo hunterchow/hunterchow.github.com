@@ -5498,58 +5498,53 @@ footer p {
   height: 1rem;
   margin-left: 5%;
 }
-#download .right .carousel {
+#download .right #bczCarousel {
   width: 90%;
-  height: auto;
+  height: 514px;
   min-height: 30rem;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-  background-color: white;
 }
-#download .right .carousel .carousel-inner {
-  height: 100%;
-  z-index: 1;
+#download .right #bczCarousel .carousel-control {
+  display: none;
 }
-#download .right .carousel .carousel-inner .active {
-  animation: carouselIn 0.6s;
-  z-index: 2;
+#download .right #bczCarousel .carousel-inner {
+  height: 514px;
+  overflow: hidden;
 }
-#download .right .carousel .carousel-inner .item {
-  width: 100%;
-  z-index: 1;
-  animation: carouselOut 0.6s;
+#download .right #bczCarousel .carousel-inner img {
+  height: 514px;
 }
-#download .right .carousel .carousel-inner .item img {
-  width: 100%;
-  height: auto;
-}
-#download .right .carousel .carousel-indicators {
+#download .right #bczCarousel .carousel-indicators {
   width: 60%;
   height: 1.25rem;
   position: absolute;
   left: 50%;
+  bottom: 3%;
   margin-left: -30%;
   padding: 0;
   text-align: center;
-  z-index: 3;
 }
-#download .right .carousel .carousel-indicators li {
-  text-indent: -9999em;
-  width: 6px;
-  height: 6px;
+#download .right #bczCarousel .carousel-indicators li {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
   margin: 0 0.125rem;
-  background-color: #add8e6;
-  border-radius: 50%;
+  background-color: lightblue;
+  border-radius: 100%;
 }
-#download .right .carousel .carousel-indicators li .active {
+#download .right #bczCarousel .carousel-indicators .active {
   transform: scale(1.5);
 }
 #join-us .bcz-banner {
   width: 900px;
   max-height: 385px;
   margin: 5px auto 70px;
+}
+#join-us .bcz-banner .carousel-control {
+  display: none;
 }
 #join-us .bcz-banner .carousel-inner img {
   height: 385px;
@@ -5561,7 +5556,7 @@ footer p {
 #join-us .bcz-banner .carousel-indicators li {
   background-color: lightblue;
   padding: 0;
-  margin: 0;
+  margin: 5px;
   border: none;
   width: 7px;
   height: 7px;

@@ -2,20 +2,11 @@
 
 <div class="container" id="join-us">
   <div class="bcz-banner">
-    <div id="happyJobs" class="carousel slide" data-ride="carousel" data-interval="3000">
-      <div class="carousel-inner">
-        <div class="item active"><img src="img/join/jobs-01.jpg"/></div>
-        <div class="item "><img src="img/join/jobs-02.jpg"/></div>
-        <div class="item "><img src="img/join/jobs-03.jpg"/></div>
-        <div class="item "><img src="img/join/jobs-04.jpg"/></div>
-      </div>
-      <ol class="carousel-indicators list list-inline list-unstyled">
-        <li data-target="#happyJobs" data-slide-to="0" class="active"></li>
-        <li data-target="#happyJobs" data-slide-to="1" class=""></li>
-        <li data-target="#happyJobs" data-slide-to="2" class=""></li>
-        <li data-target="#happyJobs" data-slide-to="3" class=""></li>
-      </ol>
-    </div>
+      <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+          <img ng-src="{{slide.image}}"/>
+        </uib-slide>
+      </uib-carousel>
   </div>
   <div class="intro">
     <p class="info">成都超有爱科技有限公司成立于 2012 年，以背单词 App 百词斩切入了在线教育市场。</p>

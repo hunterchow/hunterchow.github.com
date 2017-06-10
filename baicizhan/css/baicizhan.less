@@ -649,33 +649,22 @@ footer {
         margin-left: 5%;
       }
     }
-    .carousel {
+    #bczCarousel {
       width: 90%;
-      height: auto;
+      height: 514px;
       min-height: 30rem;
       overflow: hidden;
       margin-left: auto;
       margin-right: auto;
       box-shadow: rgba(0, 0, 0, .5) 0 0 3px;
-      background-color: white;
+      .carousel-control {
+        display: none;
+      }
       .carousel-inner {
-        height: 100%;
-        z-index: 1;
-        .active {
-          animation: carouselIn 0.6s;
-          z-index: 2;
-        }
-        .item {
-          //position: absolute;
-          //left:0;
-          //top:0;
-          width: 100%;
-          z-index: 1;
-          animation: carouselOut 0.6s;
-          img {
-            width: 100%;
-            height: auto;
-          }
+        height:514px;
+        overflow: hidden;
+        img {
+          height:514px;
         }
       }
       .carousel-indicators {
@@ -683,27 +672,26 @@ footer {
         height: 1.25rem;
         position: absolute;
         left: 50%;
-        //bottom:3%;
+        bottom:3%;
         margin-left: -30%;
         padding: 0;
         text-align: center;
-        z-index: 3;
         li {
-          text-indent: -9999em;
-          //display: inline-block;
-          width: 6px;
-          height: 6px;
+          display: inline-block;
+          width: 7px;
+          height: 7px;
           margin: 0 0.125rem;
-          background-color: rgb(173, 216, 230);
-          border-radius: 50%;
-          .active {
-            transform: scale(1.5);
-          }
+          background-color: lightblue;
+          border-radius: 100%;
+        }
+        .active {
+          transform: scale(1.5);
         }
       }
     }
   }
 }
+
 
 //加入我们页面样式
 #join-us {
@@ -712,6 +700,9 @@ footer {
     //height:420px;
     max-height: 385px;
     margin: 5px auto 70px;
+    .carousel-control{
+      display: none;
+    }
     .carousel-inner {
       img {
         height: 385px;
@@ -723,7 +714,7 @@ footer {
       li {
         background-color: lightblue;
         padding: 0;
-        margin: 0;
+        margin: 5px;
         border: none;
         width: 7px;
         height: 7px;

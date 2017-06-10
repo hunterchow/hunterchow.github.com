@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/5/31.
  */
-angular.module('baicizhan', ['ng', 'ngRoute', 'ngAnimate'])
+angular.module('baicizhan', ['ng', 'ngRoute', 'ngAnimate','ui.bootstrap'])
   .controller('homeCtrl', function ($scope) {
 
   }).controller('wordTVCtrl', function ($scope) {
@@ -146,20 +146,63 @@ angular.module('baicizhan', ['ng', 'ngRoute', 'ngAnimate'])
     }
   ];
 }).controller('downloadCtrl', function ($scope) {
+  $scope.myInterval=3000;
+  $scope.noWrapSlides=false;
+  $scope.active=0;
+  var slides=$scope.slides=[];
+  var addSlide=function(){
+    slides.push({
+      image:"img/download/download-01.png",
+      id:0
+    });
+    slides.push({
+      image:"img/download/download-02.png",
+      id:1
+    });
+    slides.push({
+      image:"img/download/download-03.png",
+      id:2
+    });
+    slides.push({
+      image:"img/download/download-04.png",
+      id:3
+    });
+    slides.push({
+      image:"img/download/download-05.png",
+      id:4
+    });
+    slides.push({
+      image:"img/download/download-06.png",
+      id:5
+    });
+  };
+  addSlide();
 
-}).controller('joinCtrl', function ($scope, $interval) {
-  // $scope.banner = ["active", "", "", ""];
-  // for (var i = 0, temp; i < $scope.banner.length; i++) {
-  //   var fun = (function (i) {
-  //     return function () {
-  //       // (i==4)&&(i=0);
-  //       temp = $scope.banner[i];
-  //       $scope.banner[i] = $scope.banner[i + 1];
-  //       $scope.banner[i + 1] = temp;
-  //     }
-  //   })(i);
-  //   $interval(fun, 3000);
-  // }
+}).controller('joinCtrl', function ($scope) {
+
+  $scope.myInterval=5000;
+  $scope.noWrapSlides=false;
+  $scope.active=0;
+  var slides=$scope.slides=[];
+  var addSlide=function(){
+    slides.push({
+      image:"img/join/jobs-01.jpg",
+      id:0
+    });
+    slides.push({
+      image:"img/join/jobs-02.jpg",
+      id:1
+    });
+    slides.push({
+      image:"img/join/jobs-03.jpg",
+      id:2
+    });
+    slides.push({
+      image:"img/join/jobs-04.jpg",
+      id:3
+    });
+  };
+  addSlide();
 
   $scope.jobList1 = [
     {name: "超级Server服务器开发工程师", category: "技术类", location: "成都", time: "2017-05-25"},
